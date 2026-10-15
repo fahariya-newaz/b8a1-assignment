@@ -24,8 +24,8 @@ function processInput(value:string | number | boolean): string | number {
     T[] {
         return arrays.flat();
     }
-
-interface Course {
+    
+    interface Course {
     title: string;
     students: number;
     isPublished: boolean;
@@ -66,16 +66,13 @@ class Employee {
 return "Employee: " + this.name + ", Base Salary: " + 
 this.baseSalary;
   }
-}
-  class Manager extends Employee {
+} class Manager extends Employee {
   private department: string;
-
  constructor(name: string, baseSalary:
      number, department: string) {
     super(name, baseSalary);
     this.department = department;
   }
-
  getRoleInfo(): string {
     return "Manager of " + this.department + ": " + this.name;
   }
@@ -85,8 +82,7 @@ function validateAgeAsync(age: number):
  Promise<string> {
   return new Promise<string>((resolve, reject) =>
      {
-   
-        if (age < 18) {
+    if (age < 18) {
       reject(new Error("Access Denied: Must be 18 or older"));
     } 
     else {
